@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav {
+  @apply flex;
+}
+
+.nav-elements {
+  @apply font-Outfit;
+}
+
+/** Binary Background Keyframes **/
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.odd, .even {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 20px;
+  padding-bottom: 10px;
+  @apply font-Outfit font-bold text-ash-grey opacity-20 overflow-hidden;
+}
+
+.odd {
+  animation: moveLeft 6000s linear infinite;
+}
+
+.even {
+  animation: moveRight 6000s linear infinite;
+}
+
+.font-awesome{
+  color: white;
+}
